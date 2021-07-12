@@ -36,3 +36,47 @@ git remote add origin https://github.com/edycoleee/sulfat.git
 git branch -M main
 git push -u origin main
 
+
+5. for deploy to firebase 
+firebase target:apply hosting admin admin-rssulfat
+firebase deploy --only hosting:admin
+firebase target:apply hosting dokter dokter-rssulfat
+firebase deploy --only hosting:dokter
+firebase target:apply hosting dashbord rssulfat
+firebase deploy --only hosting:dashbord
+
+"hosting": [
+    {
+      "target": "admin",
+      "public": "admin-site/build",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "dashboard",
+      "public": "dashboard-site/build",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "dokter",
+      "public": "dokter-site/build",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+
+
+
