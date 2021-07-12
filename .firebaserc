@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "rssulfat"
+  },
+  "targets": {
+    "rssulfat": {
+      "hosting": {
+        "dashbord": [
+          "rssulfat"
+        ]
+      }
+    }
   }
 }
