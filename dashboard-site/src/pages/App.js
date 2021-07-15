@@ -1,8 +1,30 @@
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Box,
+  Grid,
+  TextField,
+} from "@material-ui/core";
+import CameraIcon from "@material-ui/icons/PhotoCamera";
+
 function App() {
   return (
     <div>
-      <h1>Coba</h1>
+      {/* Navbar-------------- */}
+      <AppBar position="relative">
+        <Toolbar>
+          <CameraIcon />
+          <Typography variant="h6" color="inherit" noWrap ml={2}>
+            Album layout
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      {/* Navbar-------------- */}
+      {/* Navbar-------------- */}
+      {/* Navbar-------------- */}
+      {/* Navbar-------------- */}
+      {/* Navbar-------------- */}
     </div>
   );
 }
