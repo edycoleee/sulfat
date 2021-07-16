@@ -12,6 +12,10 @@ import {
   Hidden,
   Button,
   IconButton,
+  Link,
+  Paper,
+  MenuItem,
+  Menu,
 } from "@material-ui/core";
 import CameraIcon from "@material-ui/icons/PhotoCamera";
 import Showcase from "../../assets/showcase.svg";
@@ -41,6 +45,16 @@ const useStyles = makeStyles((theme) => ({
 
 function Index() {
   const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <div>
       {/* Navbar-------------- */}
@@ -52,6 +66,60 @@ function Index() {
               Album layout
             </Typography>
           </Box>
+          <Hidden xsDown>
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              border={1}
+            >
+              <Box ml={5}>
+                <Link
+                  href="#"
+                  onClick={(e) => e.preventDefault}
+                  color="inherit"
+                >
+                  Profile
+                </Link>
+              </Box>
+              <Box ml={5}>
+                <Link
+                  href="#"
+                  onClick={(e) => e.preventDefault}
+                  color="inherit"
+                >
+                  My account
+                </Link>
+              </Box>
+              <Box ml={5}>
+                <Link
+                  href="#"
+                  onClick={(e) => e.preventDefault}
+                  color="inherit"
+                >
+                  Logout
+                </Link>
+              </Box>
+            </Box>
+          </Hidden>
+          <Hidden smUp>
+            <Box ml={25} display="flex" flexDirection="row-reverse">
+              <Button variant="contained" color="primary" onClick={handleClick}>
+                MENU
+              </Button>
+              <Menu
+                id="simple-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
+              </Menu>
+            </Box>
+          </Hidden>
         </Toolbar>
       </AppBar>
       {/* Showcase -------------- */}
@@ -86,17 +154,22 @@ function Index() {
       <Box className={classes.news} mt={-3} p={1}>
         <Grid container>
           <Grid item xs={12} sm={6}>
-            <Typography variant="h5">Responsive h5</Typography>
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              mt={1}
+            >
+              <Typography variant="h5">Responsive h5</Typography>
+            </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Textfield
-              variant=""
-              placeholder="Search Google Maps"
-              styles={{ backgroundColor: "#FFFFFF" }}
-            />
-            <IconButton type="submit" aria-label="search">
-              <SearchIcon />
-            </IconButton>
+            <Box display="flex" justifyContent="center" alignItems="center">
+              <TextField id="standard-basic" variant="filled" />
+              <IconButton type="submit" aria-label="search">
+                <SearchIcon />
+              </IconButton>
+            </Box>
           </Grid>
         </Grid>
       </Box>
