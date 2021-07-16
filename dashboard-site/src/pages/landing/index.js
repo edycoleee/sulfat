@@ -16,6 +16,9 @@ import {
   Paper,
   MenuItem,
   Menu,
+  CardContent,
+  Card,
+  CardActions,
 } from "@material-ui/core";
 import CameraIcon from "@material-ui/icons/PhotoCamera";
 import Showcase from "../../assets/showcase.svg";
@@ -67,19 +70,14 @@ function Index() {
             </Typography>
           </Box>
           <Hidden xsDown>
-            <Box
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              border={1}
-            >
+            <Box display="flex" justifyContent="center" alignItems="center">
               <Box ml={5}>
                 <Link
                   href="#"
                   onClick={(e) => e.preventDefault}
                   color="inherit"
                 >
-                  Profile
+                  What You'll Learn
                 </Link>
               </Box>
               <Box ml={5}>
@@ -88,7 +86,7 @@ function Index() {
                   onClick={(e) => e.preventDefault}
                   color="inherit"
                 >
-                  My account
+                  Questions
                 </Link>
               </Box>
               <Box ml={5}>
@@ -97,7 +95,7 @@ function Index() {
                   onClick={(e) => e.preventDefault}
                   color="inherit"
                 >
-                  Logout
+                  Instructors
                 </Link>
               </Box>
             </Box>
@@ -114,9 +112,9 @@ function Index() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleClose}>What You'll Learn</MenuItem>
+                <MenuItem onClick={handleClose}>Questions</MenuItem>
+                <MenuItem onClick={handleClose}>Instructors</MenuItem>
               </Menu>
             </Box>
           </Hidden>
@@ -160,20 +158,35 @@ function Index() {
               alignItems="center"
               mt={1}
             >
-              <Typography variant="h5">Responsive h5</Typography>
+              <Typography variant="h5">Sign Up For Our Newsletter</Typography>
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>
             <Box display="flex" justifyContent="center" alignItems="center">
               <TextField id="standard-basic" variant="filled" />
-              <IconButton type="submit" aria-label="search">
-                <SearchIcon />
-              </IconButton>
+              <Box ml={1} />
+              <Button variant="contained">Submit</Button>
             </Box>
           </Grid>
         </Grid>
       </Box>
-      {/* Navbar-------------- */}
+      {/* Boxes-------------- */}
+
+      <Grid container>
+        <Grid item xs={12} sm={6}>
+          <Card>
+            <CardContent>
+              <Typography color="textSecondary" gutterBottom>
+                Word of the Day
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Learn More</Button>
+            </CardActions>
+          </Card>
+        </Grid>
+      </Grid>
+
       {/* Navbar-------------- */}
       {/* Navbar-------------- */}
     </div>
