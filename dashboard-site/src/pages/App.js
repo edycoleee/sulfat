@@ -1,10 +1,10 @@
-//import Landing from "./landing";
-import Login from "./login";
+import Landing from "./landing";
+//import Login from "./login";
 function App() {
   return (
     <div>
-      {/* <Landing /> */}
-      <Login />
+      <Landing />
+      {/* <Login /> */}
     </div>
   );
 }

@@ -42,8 +42,8 @@ firebase target:apply hosting admin admin-rssulfat
 firebase deploy --only hosting:admin
 firebase target:apply hosting dokter dokter-rssulfat
 firebase deploy --only hosting:dokter
-firebase target:apply hosting dashbord rssulfat
-firebase deploy --only hosting:dashbord
+firebase target:apply hosting dashboard rssulfat
+firebase deploy --only hosting:dashboard
 
 "hosting": [
     {

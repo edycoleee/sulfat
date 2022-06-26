@@ -153,12 +153,10 @@ function Index() {
             <Grid item xs={12} sm={6}>
               <div className={classes.paper}>
                 <h1>
-                  Become a <span class="text-warning"> Web Developer </span>
+                  Ayo Sinau Web <span class="text-warning"> Bareng2 </span>
                 </h1>
                 <p class="lead my-4">
-                  We focus on teaching our students the fundamentals of the
-                  latest and greatest technologies to prepare them for their
-                  first dev role
+                  NodeJs, ReactJs, Firebase Google, Github, MaterialUI, Gaspoll
                 </p>
                 <div>
                   <Button variant="contained" color="primary">
