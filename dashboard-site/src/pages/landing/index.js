@@ -156,7 +156,7 @@ function Index() {
                   Ayo Sinau Web <span class="text-warning"> Bareng2 </span>
                 </h1>
                 <p class="lead my-4">
-                  NodeJs, ReactJs, Firebase Google, Github, MaterialUI, Gaspoll
+                  NodeJs, ReactJs, Firebase Google, Github, MaterialUI, Gaspoll, RemBlong
                 </p>
                 <div>
                   <Button variant="contained" color="primary">
